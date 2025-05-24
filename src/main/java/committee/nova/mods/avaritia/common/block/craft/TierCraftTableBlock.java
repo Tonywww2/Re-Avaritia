@@ -66,12 +66,12 @@ public class TierCraftTableBlock extends BaseTileEntityBlock {
     @Override
     public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
         // 遍历方向列表，检查每个方向的方块状态
-        for (Direction direction : Direction.values()) {
-            BlockPos offsetPos = pos.relative(direction);
-            if (level.getBlockState(offsetPos).is( ModBlocks.infinity.get())) {
-                return 15;
-            }
-        }
+        // for (Direction direction : Direction.values()) {
+        //     BlockPos offsetPos = pos.relative(direction);
+        //     if (level.getBlockState(offsetPos).is( ModBlocks.infinity.get())) {
+        //         return 15;
+        //     }
+        // }
         return this.tier.lightLevel;
     }
 }
